@@ -14,6 +14,6 @@ sudo -i bash <(curl -s https://github.com/AnthonyMacle/K8S-Cluster-Setup/blob/ma
 Use the "kubeadm join" in order for the Worker Nodes to join the cluster.
 
 ```
- "kubectl get nodes"
+kubectl get nodes
 ```
 
