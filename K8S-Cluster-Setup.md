@@ -1,4 +1,4 @@
-# K8S-Cluster-Setup
+# K8S-Cluster-Setup - This script only works on Ubuntu 20.04!
 
 ## Master Node
 
