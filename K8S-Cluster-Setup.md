@@ -17,9 +17,9 @@ Use the "kubeadm join" in order for the Worker Nodes to join the cluster.
 kubectl get nodes
 ```
 
-## Debug 
+# Debug (In case you have issue registering the worker node)
 
-# From Master Node
+## From Master Node
 ```
 kubectl drain WORKER-NODE-NAME
 ```
@@ -28,7 +28,7 @@ kubectl delete node WORKER-NODE-NAME
 ```
 
 
-# From Worker Node
+## From Worker Node
 
 ```
  apt-get remove --purge kubelet kubeadm kubectl
