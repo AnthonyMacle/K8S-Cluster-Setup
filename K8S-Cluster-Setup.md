@@ -17,7 +17,18 @@ Use the "kubeadm join" in order for the Worker Nodes to join the cluster.
 kubectl get nodes
 ```
 
-# Debug (From Worker Node)
+## Debug 
+
+# From Master Node
+```
+kubectl drain WORKER-NODE-NAME
+```
+```
+kubectl delete node WORKER-NODE-NAME
+```
+
+
+# From Worker Node
 
 ```
  apt-get remove --purge kubelet kubeadm kubectl
@@ -33,5 +44,12 @@ apt-get install kubelet kubeadm kubectl
 ```
 Add the node to the cluster:
 `
-kubeadm join  xxxxxxxxxx
-`
+kubeadm join  xxxxxxxxxx YOU NEED TO GET THIS COMMAND FROM THE MASTER NODE -> See below step
+
+# Get join command from Worker Node
+
+```
+ kubeadm token create --print-join-command
+```
+
+
