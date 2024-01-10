@@ -46,7 +46,7 @@ Add the node to the cluster:
 `
 kubeadm join  xxxxxxxxxx YOU NEED TO GET THIS COMMAND FROM THE MASTER NODE -> See below step
 
-# Get join command from Worker Node
+## Get join command from Worker Node
 
 ```
  kubeadm token create --print-join-command
