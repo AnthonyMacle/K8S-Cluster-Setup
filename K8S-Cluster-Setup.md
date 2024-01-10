@@ -17,3 +17,21 @@ Use the "kubeadm join" in order for the Worker Nodes to join the cluster.
 kubectl get nodes
 ```
 
+# Debug (From Worker Node)
+
+```
+ apt-get remove --purge kubelet kubeadm kubectl
+```
+```
+ rm -rf /etc/systemd/system/kubelnet.service.d
+ rm -rf /etc/kubernetes/
+ rm -rf /var/lib/kubelet/
+ rm -rf /usr/libexec/kubernetes
+```
+```
+apt-get install kubelet kubeadm kubectl 
+```
+Add the node to the cluster:
+`
+kubeadm join  xxxxxxxxxx
+`
